@@ -1,11 +1,24 @@
-// @solution 2
+// @ solution 3
 function capitalize(str) {
-  let result = [];
-  for (let word of str.split(" ")) {
-    result.push(word[0].toUpperCase() + word.slice(1));
+  let result = str[0].toUpperCase();
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === " ") {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i];
+    }
   }
-  console.log(result.join(" "));
+  console.log(result);
 }
+// @solution 2
+// function capitalize(str) {
+//   let result = [];
+//   for (let word of str.split(" ")) {
+//     result.push(word[0].toUpperCase() + word.slice(1));
+//   }
+//   console.log(result.join(" "));
+// }
+
 // @solution 1
 // function capitalize(str) {
 //   let newarr = str.split(" ");
